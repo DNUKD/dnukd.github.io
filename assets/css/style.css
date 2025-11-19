@@ -16,11 +16,25 @@ body {
 
 /* ===== CONTAINER ===== */
 
-.container {
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 20px;
+#contactInfo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.mail-inline {
+  color: #1e1e1e;
+}
+
+.mail-highlight {
+  background: linear-gradient(#fce9a8 0 0);
+  background-repeat: no-repeat;
+  background-size: 100% 0.6em;
+  background-position: 0 70%;
+  padding: 0 2px;
+  color: #1e1e1e;
+  text-decoration: none;
 }
 
 /* ===== HEADER ===== */
@@ -35,7 +49,7 @@ body {
 
 .header-text {
   max-width: 460px;
-  text-align: left;
+  text-align: right;
 }
 
 .header-text h1 {
@@ -43,7 +57,6 @@ body {
   font-size: 36px;
   letter-spacing: 2px;
   color: #1e1e1e;
-
 }
 
 .subtitle {
@@ -62,38 +75,23 @@ body {
 /* ===== NAV ===== */
 
 .nav-row {
-  margin: 25px 0;
   display: flex;
-  justify-content: center;
+  justify-content: right;
   gap: 20px;
-  width: 100%;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  padding-bottom: 10px;
 }
 
-.nav-row a.github {
-  color: #DCDCAA;
-  text-decoration: none;
 
+.nav-row a.github {
+  color: #de8dd8;
 }
 
 .nav-row a.linkedin {
   color: #4EC9B0;
-  text-decoration: none;
-
-}
-
-.nav-row a.icando {
-  color: #C586C0;
-  text-decoration: none;
-
 }
 
 .nav-row a.contact {
   color: #569CD6;
-  text-decoration: none;
-
 }
 
 .nav-row a {
@@ -126,7 +124,6 @@ body {
   justify-items: center;
 }
 
-
 .skill img {
   width: 50px;
   height: 50px;
@@ -139,6 +136,12 @@ body {
   text-align: center;
 }
 
+/* ===== DECORATION (fixed, nem ugrál) ===== */
+
+.container {
+  position: relative;
+}
+
 
 /* ===== DESCRIPTION ===== */
 
@@ -148,6 +151,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   text-align: left;
+  min-height: auto;
 }
 
 /* ===== TABS ===== */
@@ -158,22 +162,15 @@ body {
   border-radius: 20px;
   font-size: 14px;
   cursor: pointer;
-
   background: transparent;
-  border: 2px solid #C586C0;
-  color: #C586C0;
-
+  border: 2px solid #DCDCAA;
+  color: #DCDCAA;
   transition: 0.2s ease;
 }
 
-.tab-btn:hover {
-  border-color: #cc79c5;
-  color: #C586C0;
-}
-
 .tab-btn.active {
-  border-color: #569CD6;
-  color: #569CD6;
+  border-color: #4EC9B0;
+  color: #4EC9B0;
 }
 
 .tab {
@@ -182,4 +179,52 @@ body {
 
 .tab.active {
   display: block;
+}
+
+/* ===== HIGHLIGHT ===== */
+
+.highlight {
+  background: linear-gradient(#fce9a8 0 0);
+  background-repeat: no-repeat;
+  background-size: 100% 0.6em;
+  background-position: 0 70%;
+  padding: 0 2px;
+  display: inline;
+}
+
+.hero {
+  position: relative;
+  max-width: 600px;
+  width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 100px;
+}
+
+.decor-folder {
+  position: absolute;
+  top: 80px;
+  left: 20px;
+  width: 60px;
+  height: 60px;
+  background-image: url("/assets/img/decor/folder.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+.decor-pointer {
+  position: absolute;
+  right: -20px;
+  bottom: 0px;
+  width: 35px;
+  height: 35px;
+  background-image: url("/assets/img/decor/pointer.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
 }

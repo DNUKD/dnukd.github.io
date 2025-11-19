@@ -4,108 +4,91 @@ title: Home
 ---
 
 <div class="container">
+  <section class="hero">
+    <div class="decor-folder"></div>
 
-  <header class="header">
-    <div class="header-text">
-      <h1>Halasi Ilona</h1>
-      <p class="subtitle">Software Developer in<br>Budapest</p>
-    </div>
-
-    <div class="header-img">
-      <img src="/assets/img/avatar.png" alt="Profile">
-    </div>
-  </header>
-
-  <nav class="nav-row">
-    <a class="github" data-link="github" href="https://github.com/DNUKD" target="_blank"
-      rel="noopener noreferrer">GitHub</a>
-
-    <a class="linkedin" data-link="linkedin" href="https://www.linkedin.com/in/ilona-halasi-a90864207/" target="_blank"
-      rel="noopener noreferrer">LinkedIn</a>
-    <a class="contact" data-link="contact" href="mailto:h.ilona27@gmail.com">
-      Contact
-    </a>
-
-  </nav>
-
-  <div class="description-block centered">
-    <button class="tab-btn active" data-tab="short">About</button>
-    <button class="tab-btn" data-tab="long">Skills</button>
-
-    <div id="short" class="tab active">
-      <p>Hello! I'm a developer who enjoys coding, learning, and building side projects.</p>
-    </div>
-
-    <div id="long" class="tab">
-
-      <div class="skills-grid">
-
-        <div class="skill">
-          <img src="/assets/img/skills/html5/html5-plain.svg" alt="HTML5">
-          <p>HTML5</p>
-        </div>
-
-        <div class="skill">
-          <img src="/assets/img/skills/css3/css3-plain.svg" alt="CSS3">
-          <p>CSS3</p>
-        </div>
-
-        <div class="skill">
-          <img src="/assets/img/skills/javascript/javascript-plain.svg" alt="JavaScript">
-          <p>JavaScript</p>
-        </div>
-
-        <div class="skill">
-          <img src="/assets/img/skills/git/git-plain.svg" alt="Git">
-          <p>Git</p>
-        </div>
-
-        <div class="skill">
-          <img src="/assets/img/skills/github/github-original.svg" alt="GitHub">
-          <p>GitHub</p>
-        </div>
-
-        <div class="skill">
-          <img src="/assets/img/skills/python/python-plain.svg" alt="Python">
-          <p>Python</p>
-        </div>
-
-        <div class="skill">
-          <img src="/assets/img/skills/sqldeveloper/sqldeveloper-plain.svg" alt="SQL Developer">
-          <p>SQL Developer</p>
-        </div>
-
-        <div class="skill">
-          <img src="/assets/img/skills/docker/docker-plain.svg" alt="Docker">
-          <p>Docker</p>
-        </div>
-
-        <div class="skill">
-          <img src="/assets/img/skills/dot-net/dot-net-plain.svg" alt=".NET">
-          <p>.NET</p>
-        </div>
-
+    <header class="header">
+      <div class="header-text">
+        <h1>Halasi Ilona</h1>
+        <p class="subtitle">
+          <span class="highlight">Software Developer</span> in<br>Budapest
+        </p>
       </div>
 
+      <div class="header-img">
+        <img src="/assets/img/avatar_selfie.png" alt="Profile">
+      </div>
+    </header>
 
-    </div>
+    <nav class="nav-row">
+      <a class="github" data-link="github" href="https://github.com/DNUKD" target="_blank">GitHub</a>
+      <a class="linkedin" data-link="linkedin" href="https://www.linkedin.com/in/ilona-halasi-a90864207/"
+        target="_blank">LinkedIn</a>
+      <a class="contact" id="contactBtn" href="#">Contact</a>
+      <span id="contactInfo"></span>
+    </nav>
 
+    <div class="description-block">
+      <div class="decor-pointer"></div>
+      <button class="tab-btn active" data-tab="short">About</button>
+      <button class="tab-btn" data-tab="long">Skills</button>
 
-    <script>
-      document.querySelectorAll(".tab-btn").forEach(btn => {
-        btn.addEventListener("click", () => {
-          document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
-          btn.classList.add("active");
-          document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
-          const target = btn.getAttribute("data-tab");
-          document.getElementById(target).classList.add("active");
-        });
-      });
+      <div id="short" class="tab active">
+        <p>Hello! I'm a developer who enjoys coding, learning, and building side projects.</p>
+      </div>
+      <div id="long" class="tab">
+        <div class="skills-grid">
 
-      document.querySelectorAll('.nav-row a').forEach(link => {
-        link.addEventListener('click', () => {
-          document.querySelectorAll('.nav-row a').forEach(a => a.classList.remove('active'));
-          link.classList.add('active');
-        });
-      });
-    </script>
+          <div class="skill">
+            <img src="/assets/img/skills/html5/html5-plain.svg" alt="HTML5">
+            <p>HTML5</p>
+          </div>
+
+          <div class="skill">
+            <img src="/assets/img/skills/css3/css3-plain.svg" alt="CSS3">
+            <p>CSS3</p>
+          </div>
+
+          <div class="skill">
+            <img src="/assets/img/skills/javascript/javascript-plain.svg" alt="JavaScript">
+            <p>JavaScript</p>
+          </div>
+
+          <div class="skill">
+            <img src="/assets/img/skills/git/git-plain.svg" alt="Git">
+            <p>Git</p>
+          </div>
+
+          <div class="skill">
+            <img src="/assets/img/skills/github/github-original.svg" alt="GitHub">
+            <p>GitHub</p>
+          </div>
+
+          <div class="skill">
+            <img src="/assets/img/skills/python/python-plain.svg" alt="Python">
+            <p>Python</p>
+          </div>
+
+          <div class="skill">
+            <img src="/assets/img/skills/sqldeveloper/sqldeveloper-plain.svg" alt="SQL Developer">
+            <p>SQL Developer</p>
+          </div>
+
+          <div class="skill">
+            <img src="/assets/img/skills/docker/docker-plain.svg" alt="Docker">
+            <p>Docker</p>
+          </div>
+
+          <div class="skill">
+            <img src="/assets/img/skills/dot-net/dot-net-plain.svg" alt=".NET">
+            <p>.NET</p>
+          </div>
+
+        </div>
+      </div>
+    </div> 
+
+  </section>
+</div>
+
+<script src="/assets/js/main.js"></script>
