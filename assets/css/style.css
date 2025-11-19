@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:wght@400;700&display=swap');
+
+/* ===== GLOBAL ===== */
+
+body {
+  font-family: "Cascadia Code", monospace;
+  background: #f1f1f1;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding-top: 80px;
+}
+
+/* ===== CONTAINER ===== */
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== HEADER ===== */
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 40px;
+}
+
+.header-text {
+  max-width: 460px;
+  text-align: left;
+}
+
+.header-text h1 {
+  margin: 0 0 10px 0;
+  font-size: 36px;
+  letter-spacing: 2px;
+  color: #1e1e1e;
+
+}
+
+.subtitle {
+  margin: 0 0 5px 0;
+  color: #282828;
+  font-size: 20px;
+  letter-spacing: 0.7px;
+  line-height: 1.4;
+}
+
+.header-img img {
+  width: 160px;
+  height: auto;
+}
+
+/* ===== NAV ===== */
+
+.nav-row {
+  margin: 25px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-row a.github {
+  color: #DCDCAA;
+  text-decoration: none;
+
+}
+
+.nav-row a.linkedin {
+  color: #4EC9B0;
+  text-decoration: none;
+
+}
+
+.nav-row a.icando {
+  color: #C586C0;
+  text-decoration: none;
+
+}
+
+.nav-row a.contact {
+  color: #569CD6;
+  text-decoration: none;
+
+}
+
+.nav-row a {
+  position: relative;
+  text-decoration: none;
+}
+
+.nav-row a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: currentColor;
+  transition: width 0.25s ease;
+}
+
+.nav-row a:hover::after {
+  width: 100%;
+}
+
+/* ===== SKILLS GRID ===== */
+
+.skills-grid {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  justify-items: center;
+}
+
+
+.skill img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.skill p {
+  margin-top: 8px;
+  font-size: 14px;
+  text-align: center;
+}
+
+
+/* ===== DESCRIPTION ===== */
+
+.description-block {
+  margin-top: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+/* ===== TABS ===== */
+
+.tab-btn {
+  padding: 6px 16px;
+  margin-right: 10px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+
+  background: transparent;
+  border: 2px solid #C586C0;
+  color: #C586C0;
+
+  transition: 0.2s ease;
+}
+
+.tab-btn:hover {
+  border-color: #cc79c5;
+  color: #C586C0;
+}
+
+.tab-btn.active {
+  border-color: #569CD6;
+  color: #569CD6;
+}
+
+.tab {
+  display: none;
+}
+
+.tab.active {
+  display: block;
+}
