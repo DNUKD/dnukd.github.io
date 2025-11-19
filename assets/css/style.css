@@ -7,11 +7,13 @@ body {
   background: #f1f1f1;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
   min-height: 100vh;
-  padding-top: 80px;
+  padding-top: 50px;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 /* ===== CONTAINER ===== */
@@ -81,7 +83,6 @@ body {
   padding-bottom: 10px;
 }
 
-
 .nav-row a.github {
   color: #de8dd8;
 }
@@ -136,22 +137,32 @@ body {
   text-align: center;
 }
 
-/* ===== DECORATION (fixed, nem ugrál) ===== */
+/* ===== DECORATION ===== */
 
 .container {
   position: relative;
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
 }
-
 
 /* ===== DESCRIPTION ===== */
 
 .description-block {
-  margin-top: 20px;
   max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+  padding: 0 15px;
   text-align: left;
-  min-height: auto;
+}
+
+.description-block p {
+  text-align: justify;
+  text-align-last: left;
+  line-height: 1.6;
+  letter-spacing: 0.2px;
+
 }
 
 /* ===== TABS ===== */
@@ -194,21 +205,25 @@ body {
 
 .hero {
   position: relative;
-  max-width: 600px;
-  width: 600px;
+  max-width: 700px;
+  width: 100%;
   margin: 0 auto;
   padding: 30px;
   text-align: right;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  padding-top: 100px;
+  gap: 10px;
+  padding-top: 90px;
+  box-sizing: border-box;
 }
+
+
+/* ===== DECOR ===== */
 
 .decor-folder {
   position: absolute;
   top: 80px;
-  left: 20px;
+  left: 10px;
   width: 60px;
   height: 60px;
   background-image: url("/assets/img/decor/folder.png");
@@ -219,9 +234,10 @@ body {
 
 .decor-pointer {
   position: absolute;
-  right: -20px;
-  bottom: 0px;
-  width: 35px;
+  right: 0;
+  bottom: 0;
+  transform: translateX(50%);
+  width: 30px;
   height: 35px;
   background-image: url("/assets/img/decor/pointer.png");
   background-size: contain;
@@ -229,7 +245,13 @@ body {
   pointer-events: none;
 }
 
-/* ===== RESPONSIVE ===== */
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* ===== RESPONSIVE (max-width: 768px) ===== */
+
 @media (max-width: 768px) {
 
   body {
@@ -239,9 +261,9 @@ body {
   .hero {
     max-width: 100%;
     width: 100%;
-    padding: 20px;
+    padding: 0;
+    padding-top: 20px;
     text-align: center;
-    padding-top: 60px;
   }
 
   .header {
@@ -285,8 +307,17 @@ body {
   }
 
   .description-block {
-    text-align: center;
     max-width: 100%;
+    margin: 0 auto;
+    padding: 0 8px;
+    text-align: justify;
+  }
+
+  .description-block p {
+    font-size: 15px;
+    line-height: 1.65;
+    hyphens: manual;
+    word-break: normal;
   }
 
   .decor-folder,
@@ -295,7 +326,8 @@ body {
   }
 }
 
-/* ===== EXTRA SMALL (max 480px) ===== */
+/* ===== EXTRA SMALL 480px ===== */
+
 @media (max-width: 480px) {
 
   .skills-grid {
@@ -314,4 +346,14 @@ body {
     padding: 5px 12px;
     font-size: 12px;
   }
+
+  .description-block p {
+    text-align: justify;
+    text-align-last: left;
+    font-size: 14px;
+    line-height: 1.55;
+    hyphens: manual;
+    word-break: normal;
+  }
+
 }
