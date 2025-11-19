@@ -228,3 +228,90 @@ body {
   background-repeat: no-repeat;
   pointer-events: none;
 }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+
+  body {
+    padding-top: 40px;
+  }
+
+  .hero {
+    max-width: 100%;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    padding-top: 60px;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .header-text {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .header-text h1 {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .header-img img {
+    width: 130px;
+  }
+
+  .nav-row {
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+  }
+
+  .skill img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .description-block {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .decor-folder,
+  .decor-pointer {
+    display: none;
+  }
+}
+
+/* ===== EXTRA SMALL (max 480px) ===== */
+@media (max-width: 480px) {
+
+  .skills-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .header-text h1 {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .tab-btn {
+    padding: 5px 12px;
+    font-size: 12px;
+  }
+}
